@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+script_dir="$(dirname "$(readlink -f "$0")")"
+
+command="$1"
+sudo ln -s "$script_dir/devco-TOOL" /usr/local/bin/"devco-$command"

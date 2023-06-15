@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+script_dir="$(dirname "$(readlink -f "$0")")"
+
+devcodir=$("$script_dir/upfind" -name '.devcontainer')
+echo "$devcodir"

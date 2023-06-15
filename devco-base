@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+script_dir="$(dirname "$(readlink -f "$0")")"
+
+current_dir=$(pwd)
+
+"$script_dir"/devco-up &> /dev/null
+
+docker exec -it "$("$script_dir"/devco-up)" bash -c "cd $current_dir && $*"
